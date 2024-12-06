@@ -1,6 +1,9 @@
 import { NavLink, useNavigate } from "react-router-dom"
 
 import { assets } from "../assets/assets_admin/assets"
+import { useState } from "react"
+
+import Avatar from "./Avatar"
 
 const navLinks = [
     {
@@ -23,6 +26,7 @@ const navLinks = [
 
 const Navbar = () => {
     const navigate = useNavigate()
+    const [ isLoggedIn, setIsLoggedIn ] = useState(true)
 
     return (
         <div className="flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400">
@@ -39,9 +43,22 @@ const Navbar = () => {
                 ))
             }
             </ul>
-            <button onClick={() => navigate("login")} className="bg-primary text-white hidden md:block rounded-full font-light py-3 px-8">
-                Create Account
-            </button>
+            {
+                isLoggedIn ?
+                (
+                    <div className="relative">
+                        <Avatar />
+                        <div className="absolute top-10 right-0 w-20 bg-white shadow-md p-2 hidden">
+                            <p>Profile</p>
+                            <p>Settings</p>
+                            <p>Logout</p>
+                        </div>
+                    </div>
+                ):
+                <button onClick={() => navigate("login")} className="bg-primary text-white hidden md:block rounded-full font-light py-3 px-8">
+                    Create Account
+                </button>
+            }
         </div>
     )
 }
