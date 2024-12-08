@@ -26,7 +26,7 @@ const navLinks = [
 
 const Navbar = () => {
     const navigate = useNavigate()
-    const [ isLoggedIn, setIsLoggedIn ] = useState(true)
+    const [ isLoggedIn, setIsLoggedIn ] = useState(false)
 
     return (
         <div className="flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400">
