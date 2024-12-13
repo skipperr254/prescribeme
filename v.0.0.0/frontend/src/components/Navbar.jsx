@@ -1,4 +1,4 @@
-import { NavLink, useNavigate, Link } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 
 import { assets } from "../assets/assets"
 import { useState } from "react"
