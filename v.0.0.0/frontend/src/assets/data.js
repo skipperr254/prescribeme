@@ -23,27 +23,33 @@ import Pediatricians from './Pediatricians.svg'
 export const specialityData = [
     {
         speciality: 'General physician',
-        image: General_physician
+        image: General_physician,
+        url: 'general-physician'
     },
     {
-        speciality: 'Gynecologist',
-        image: Gynecologist
+        speciality: 'Gynaecologist',
+        image: Gynecologist,
+        url: 'gynaecologist'
     },
     {
         speciality: 'Dermatologist',
-        image: Dermatologist
+        image: Dermatologist,
+        url: 'dermatologist'
     },
     {
-        speciality: 'Pediatricians',
-        image: Pediatricians
+        speciality: 'Paediatrician',
+        image: Pediatricians,
+        url: 'paediatrician'
     },
     {
         speciality: 'Neurologist',
-        image: Neurologist
+        image: Neurologist,
+        url: 'neurologist'
     },
     {
         speciality: 'Gastroenterologist',
-        image: Gastroenterologist
+        image: Gastroenterologist,
+        url: 'gastroenterologist'
     },
 ]
 

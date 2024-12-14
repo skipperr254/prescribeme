@@ -1,8 +1,11 @@
-import Header from "../components/Header"
+import { Header, SpecialityMenu } from "../components"
 
 const Home = () => {
     return (
-        <Header/>
+        <>
+            <Header/>
+            <SpecialityMenu/>
+        </>
     )
 }
 
