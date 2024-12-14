@@ -28,7 +28,7 @@ const Navbar = () => {
     const [ isLoggedIn, setIsLoggedIn ] = useState(true)
 
     return (
-        <div className="flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400 tracking-widest">
+        <div className="flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400 tracking-widest sticky top-0 bg-white z-10 bg-opacity-75 backdrop-blur-md">
             <NavLink to="/" className="w-44">
                 <img src={assets.admin_logo} alt="Prescripto Logo" />
             </NavLink>
