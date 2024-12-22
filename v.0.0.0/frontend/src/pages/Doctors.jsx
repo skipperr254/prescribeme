@@ -30,13 +30,15 @@ const Doctors = () => {
       <p className='text-gray-600'>Browse doctors by speciality.</p>
       <div className='flex flex-col sm:flex-row items-start gap-5 mt-5'>
         <div className='flex flex-col gap-4 text-sm text-gray-600'>
-          <Link
-            className='w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all flex gap-1 items-center'
-            to='/doctors'
-          >
-            <MdClear className='text-xl' />
-            Clear Filter
-          </Link>
+          {speciality && (
+            <Link
+              className='w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all flex gap-1 items-center'
+              to='/doctors'
+            >
+              <MdClear className='text-xl' />
+              Clear Filter
+            </Link>
+          )}
           {specialityData.map((specialityItem) => (
             <Link
               className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all ${
@@ -55,7 +57,7 @@ const Doctors = () => {
           {filteredDoctors.length > 0 ? (
             filteredDoctors.map((doctor) => (
               <div
-                onClick={() => navigate(`/appointment/${doctor._id}`)}
+                onClick={() => navigate(`/appointments/${doctor._id}`)}
                 key={doctor._id}
                 className='border border-blue-200 rounded-xl cursor-pointer hover:translate-y-[-10px] transition-all durtation-500'
               >
